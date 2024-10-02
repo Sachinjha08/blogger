@@ -7,7 +7,8 @@ const Home = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get("http://localhost:7000/api/v1/blog/get-all-blogs");
+                const response = await axios.get("ttps://blogger-backend-jobt.onrender.com
+/api/v1/blog/get-all-blogs");
                 console.log("API Response:", response.data);  // Log the full response to inspect the structure
 
                 // Update based on the actual structure
