@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "ttps://blogger-backend-jobt.onrender.com
+  baseURL: "https://blogger-backend-jobt.onrender.com
 ",
   headers: {
     "Content-Type": "application/json",
