@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import { post } from '../API/EndPoints';
+import { post } from '../API/EndPoints';
 import { toast } from 'react-hot-toast';
-import axios from 'axios'
 
 const CreateBlog = () => {
     const [blogData, setBlogData] = useState({
@@ -27,7 +26,7 @@ const CreateBlog = () => {
         };
 
         try {
-            await axios.post('https://blogger-backend-jobt.onrender.com/api/v1/blog/create-blogs', formData);
+            await post('/api/v1/blog/create-blogs', formData);
             toast.success('Blog created successfully!');
             navigate('/');
         } catch (error) {
