@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { get, dele, put } from '../API/EndPoints';
 
 const Home = () => {
     const [blogs, setBlogs] = useState([]);
@@ -7,7 +7,7 @@ const Home = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get("https://blogger-backend-jobt.onrender.com/api/v1/blog/get-all-blogs");
+                const response = await get("/api/v1/blog/get-all-blogs");
                 console.log("API Response:", response.data);  // Log the full response to inspect the structure
 
                 // Update based on the actual structure
