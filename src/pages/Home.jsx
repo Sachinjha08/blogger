@@ -8,12 +8,10 @@ const Home = () => {
         const fetchBlogs = async () => {
             try {
                 const response = await get("/api/v1/blog/get-all-blogs");
-                console.log("API Response:", response.data);  // Log the full response to inspect the structure
-
-                // Update based on the actual structure
+                console.log("API Response:", response.data);
                 if (Array.isArray(response.data)) {
                     setBlogs(response.data);
-                } else if (Array.isArray(response.data.blogs)) { // In case blogs are nested inside another object
+                } else if (Array.isArray(response.data.blogs)) { 
                     setBlogs(response.data.blogs);
                 } else {
                     console.error("Unexpected data structure:", response.data);
