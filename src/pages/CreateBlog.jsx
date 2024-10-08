@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { post } from '../API/EndPoints';
+//import { post } from '../API/EndPoints';
 import { toast } from 'react-hot-toast';
 import axios from 'axios'
 
