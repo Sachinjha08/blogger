@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { get, dele, put } from '../API/EndPoints';
+import { get } from '../API/EndPoints';
 
 const Home = () => {
     const [blogs, setBlogs] = useState([]);
