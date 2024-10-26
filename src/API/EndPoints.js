@@ -1,14 +1,12 @@
 import axios from "axios";
 
+export const BaseUrl = "http://localhost:8000";
+
 const instance = axios.create({
-  baseURL: "https://blogger-backend-jobt.onrender.com",
-  headers: {
-    "Content-Type": "application/json",
-  },
+  baseURL: BaseUrl,
   withCredentials: true,
 });
-
 export const get = (url, params) => instance.get(url, { params });
 export const post = (url, data) => instance.post(url, data);
-export const put = (url, data) => instance.put(url, data);
+export const path = (url, data) => instance.patch(url, data);
 export const dele = (url) => instance.delete(url);
